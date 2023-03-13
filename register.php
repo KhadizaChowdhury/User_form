@@ -56,7 +56,7 @@ if ( $_SERVER['REQUEST_METHOD'] == "POST" ) {
         // if everything is ok, try to upload file
     } else {
         $timestamp = date( 'Y-m-d_H-i-s' );
-        $new_filename = $target_dir . $timestamp . '_' . basename( $_FILES["profile_pic"]["name"] );
+        $new_filename = $target_dir .  uniqid(). '_' . $timestamp . '_' . basename( $_FILES["profile_pic"]["name"] );
         if ( move_uploaded_file( $_FILES["profile_pic"]["tmp_name"], $new_filename ) ) {
             echo "The file " . htmlspecialchars( basename( $_FILES["profile_pic"]["name"] ) ) . " has been uploaded.";
         } else {
