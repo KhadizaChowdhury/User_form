@@ -27,7 +27,7 @@
                 echo '<tr>';
                 echo '<td>' . $row[0] . '</td>';
                 echo '<td>' . $row[1] . '</td>';
-                echo '<td><img src="uploads/' . $row[2] . '" height="100"></td>';
+                echo '<td><img src="'.$row[2].'" height="100"></td>';
                 echo '</tr>';
             }
             fclose( $file );
